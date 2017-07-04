@@ -29,10 +29,12 @@ $WEB['file_name'] = basename($_SERVER['PHP_SELF']); //index.php
 /*---- 必須引入----*/
 #引入樣板引擎
 require_once 'smarty.php';
+#引入設定檔
+require_once 'config.php';
 #引入資料庫設定
 //require_once 'sqlConfig.php';
 #引入共用函數
-//require_once 'function.php';
+require_once 'function.php';
 
 $_SESSION['redirect']=isset($_SESSION['redirect'])?$_SESSION['redirect']:"";
 $smarty->assign("redirect", $_SESSION['redirect']);
